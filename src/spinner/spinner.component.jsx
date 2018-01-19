@@ -7,7 +7,7 @@ import SpinJS from 'spin.js';
 export default class Spinner extends React.PureComponent {
   static propTypes = {
     config: PropTypes.object,
-    delay: PropTypes.number.isRequired,
+    delay: PropTypes.number,
   }
 
   static defaultProps = {

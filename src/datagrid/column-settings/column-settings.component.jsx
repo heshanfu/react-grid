@@ -74,8 +74,7 @@ export default class ColumnSettings extends React.PureComponent {
 
   handleSelectItem = (item) => {
     // add item to the end of the list
-    const availableColumns = this.state.availableColumns;
-    const visibleAvailableColumns = this.state.visibleAvailableColumns;
+    const { availableColumns, visibleAvailableColumns } = this.state;
     const selectedColumns = [...this.state.selectedColumns, item];
     availableColumns.forEach((col, i) => {
       if (col.columnKey === item.columnKey) {
@@ -91,8 +90,7 @@ export default class ColumnSettings extends React.PureComponent {
   }
 
   handleDeselectItem = (item) => {
-    const availableColumns = this.state.availableColumns;
-    const visibleAvailableColumns = this.state.visibleAvailableColumns;
+    const { availableColumns, visibleAvailableColumns } = this.state;
     const selectedColumns = this.state.selectedColumns.filter(c => c.columnKey !== item.columnKey);
     availableColumns.forEach((col, i) => {
       if (col.columnKey === item.columnKey) {

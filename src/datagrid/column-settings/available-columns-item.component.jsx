@@ -18,7 +18,12 @@ export default class ColumnItem extends React.PureComponent {
   }
 
   render() {
-    const { isLocked, isSelected, name, handleItemClick } = this.props;
+    const {
+      isLocked,
+      isSelected,
+      name,
+      handleItemClick,
+    } = this.props;
     const iconClassName = classNames({
       'oc-datagrid-available-columns-item-icon': true,
       'is-locked': !!isLocked,

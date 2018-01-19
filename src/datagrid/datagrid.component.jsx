@@ -108,7 +108,7 @@ export default class DataGrid extends React.PureComponent {
 
   onEditCellKeyDown = (col, rowIndex) => (e) => {
     if (this.props.enableArrowNavigation) {
-      const columns = this.props.columns;
+      const { columns } = this.props;
       const rowsSize = this.props.data.size;
       const columnKey = Utils.getColumnKey(col);
       switch (e.keyCode) {
@@ -433,7 +433,7 @@ export default class DataGrid extends React.PureComponent {
       if (this.props.isEditing) {
         scrollToRow = this.state.currentRow;
       } else {
-        scrollToRow = this.props.scrollToRow;
+        scrollToRow = this.props.scrollToRow; // eslint-disable-line
       }
       if (scrollToRow === undefined && this.props.selectedItems.size > 0) {
         scrollToRow = this.getSelectedItemIndex(this.props.selectedItems.first());
@@ -465,7 +465,7 @@ export default class DataGrid extends React.PureComponent {
     const columnKey = Utils.getColumnKey(col);
     if (this.focusToEditCell && !this.getComponentDisabledState(rowIndex, col, 'edit')) {
       const selectedRowIndex = this.getSelectedItemIndex(this.props.selectedItems.first());
-      const selectedCell = this.props.selectedCell;
+      const { selectedCell } = this.props;
       if (selectedCell.size > 0) {
         if (selectedCell.get('rowIndex') === rowIndex && selectedCell.get('columnKey') === columnKey) {
           ref.focus();
@@ -1089,7 +1089,12 @@ export default class DataGrid extends React.PureComponent {
   }
 
   renderCell = col => (cellProps) => {
-    const { isCreating, isEditing, createData, selectedCell } = this.props;
+    const {
+      isCreating,
+      isEditing,
+      createData,
+      selectedCell,
+    } = this.props;
     const { rowIndex, ...props } = cellProps;
     const isCheckbox = this.isSelectionCheckbox(cellProps);
     let cell;
@@ -1164,7 +1169,7 @@ export default class DataGrid extends React.PureComponent {
         return (
           <Column
             columnKey="dataEmptyColumn"
-            header={<Cell>{' '}</Cell>}
+            header={<Cell>{' '}</Cell>} // eslint-disable-line
             width={10}
             isResizable={false}
             flexGrow={1}

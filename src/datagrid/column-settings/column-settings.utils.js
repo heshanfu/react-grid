@@ -8,13 +8,12 @@ export default {
   getAvailableColumns: (columns, visibleColumns) => (
     columns.map((col, i) => {
       const columnKey = Utils.getColumnKey(col);
-      const name = col.header;
-      const isLocked = col.isLocked;
+      const { header, isLocked } = col;
       const isSelected = (visibleColumns.indexOf(columnKey) !== -1);
       const sort = i + 1;
       return {
         columnKey,
-        name,
+        name: header,
         isLocked,
         isSelected,
         sort,
@@ -26,13 +25,12 @@ export default {
     visibleColumns.forEach((columnKey, i) => {
       columns.forEach((col) => {
         if (Utils.getColumnKey(col) === columnKey) {
-          const name = col.header;
-          const isLocked = col.isLocked;
+          const { header, isLocked } = col;
           const isSelected = true;
           const sort = i + 1;
           selectedColumns.push({
             columnKey,
-            name,
+            name: header,
             isLocked,
             isSelected,
             sort,

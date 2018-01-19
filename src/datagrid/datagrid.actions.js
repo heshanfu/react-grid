@@ -408,8 +408,7 @@ export const editCellValueValidate = (
             if (editData) {
               editData.forEach((editDataItem, editDataItemId) => {
                 const foundIndex = allData.findIndex(d =>
-                  d.getIn(grid.idKeyPath) === editDataItemId,
-                );
+                  d.getIn(grid.idKeyPath) === editDataItemId);
                 if (foundIndex !== -1) {
                   allData = allData.mergeDeepIn([foundIndex], editDataItem);
                 }
@@ -505,8 +504,7 @@ export const createCellValueValidate = (grid, rowIndex, keyPath, value, validato
                 .datagrid
                 .getIn([grid.id, 'createData'])
                 .find((item, i) =>
-                  i !== rowIndex && item.getIn(keyPath) === value,
-                );
+                  i !== rowIndex && item.getIn(keyPath) === value);
               if (find2) {
                 validationState = {
                   valid: false,

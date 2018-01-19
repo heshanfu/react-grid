@@ -125,9 +125,9 @@ export default class DatePicker extends React.Component {
       showOverlay: false,
     });
     // Remove invisble LRM chars from datestring
-    this.props.onChange(
-      this.props.intl.formatDate(moment.utc(day).format()).replace(/\u200E/g, ''),
-    );
+    this.props.onChange(this.props.intl
+      .formatDate(moment.utc(day).format())
+      .replace(/\u200E/g, ''));
     this.input.blur();
   }
 
@@ -142,7 +142,8 @@ export default class DatePicker extends React.Component {
       inputProps,
       inputRef,
       disabled,
-      ...otherProps } = this.props;
+      ...otherProps
+    } = this.props;
     const overlayStyle = {
       backgroundColor: '#fff',
       boxShadow: '0 5px 10px rgba(0, 0, 0, 0.2)',

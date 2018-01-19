@@ -33,12 +33,14 @@ const store = createStore(
   composeEnhancers(applyMiddleware(thunk)),
 );
 
-render((
-  <Provider store={store}>
-    <IntlProvider locale="en">
-      <Router history={hashHistory}>
-        <Route path="/" component={DataGrid} />
-      </Router>
-    </IntlProvider>
-  </Provider>
-), document.getElementById('oc-examples'));
+render(
+  (
+    <Provider store={store}>
+      <IntlProvider locale="en">
+        <Router history={hashHistory}>
+          <Route path="/" component={DataGrid} />
+        </Router>
+      </IntlProvider>
+    </Provider>
+  ), document.getElementById('oc-examples'),
+);

@@ -44,7 +44,15 @@ export default class DropdownContainer extends React.PureComponent {
   };
 
   render() {
-    const { children, id, isOpen, noCaret, title, useAnchor, ...otherProps } = this.props;
+    const {
+      children,
+      id,
+      isOpen,
+      noCaret,
+      title,
+      useAnchor,
+      ...otherProps
+    } = this.props;
     return (
       <Dropdown
         id={id}
