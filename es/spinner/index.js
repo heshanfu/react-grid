@@ -3,10 +3,10 @@
 exports.__esModule = true;
 exports.Spinner = undefined;
 
-var _spinnerComponent = require('./spinner.component.jsx');
+var _spinner = require('./spinner.component');
 
-var _spinnerComponent2 = _interopRequireDefault(_spinnerComponent);
+var _spinner2 = _interopRequireDefault(_spinner);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.Spinner = _spinnerComponent2.default;
+exports.Spinner = _spinner2.default;

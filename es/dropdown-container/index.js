@@ -3,10 +3,10 @@
 exports.__esModule = true;
 exports.DropdownContainer = undefined;
 
-var _dropdownContainerComponent = require('./dropdown-container.component.jsx');
+var _dropdownContainer = require('./dropdown-container.component');
 
-var _dropdownContainerComponent2 = _interopRequireDefault(_dropdownContainerComponent);
+var _dropdownContainer2 = _interopRequireDefault(_dropdownContainer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.DropdownContainer = _dropdownContainerComponent2.default;
+exports.DropdownContainer = _dropdownContainer2.default;
