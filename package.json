@@ -111,7 +111,7 @@
     "@opuscapita/react-floating-select": "2.0.0",
     "@opuscapita/react-icons": "2.0.3",
     "@opuscapita/react-perfect-scrollbar": "3.0.0",
-    "@opuscapita/react-select-order-list": "git+https://github.com/OpusCapita/react-select-order-list.git#oc-cm-common-styles-update",
+    "@opuscapita/react-select-order-list": "git+https://github.com/OpusCapita/react-select-order-list.git#oc-cm-common-styles-update-testbuild",
     "@opuscapita/react-spinner": "1.1.1",
     "classnames": "2.2.5",
     "fixed-data-table-2": "0.8.5",
